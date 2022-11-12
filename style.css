@@ -81,4 +81,22 @@ textarea:focus{
   font-size: 30px;
   font-weight: 800;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 160%;
+}
+/* Media Quries */
+@media (max-width: 768px) {
+  .input-area{
+      /* margin-left: 1.5%; */
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+  }
+  textarea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    /* display: block; */
+    max-width: 70vw;
+  }
 }
