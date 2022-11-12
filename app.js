@@ -10,10 +10,11 @@ let fetchLanguaes = () => {
   const options = {
     method: "GET",
     headers: {
-      "Accept-Encoding": "application/gzip",
-      "X-RapidAPI-Key": "2b1cd29875mshd60650737281d1ap159bc0jsn9f9d8143a845",
-      "X-RapidAPI-Host": "google-translate1.p.rapidapi.com",
-    },
+		'content-type': 'application/x-www-form-urlencoded',
+		'Accept-Encoding': 'application/gzip',
+		'X-RapidAPI-Key': '8182bf80aemshd889891902e1604p1e2c7ejsn14c672760440',
+		'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
+	},
   };
 
   fetch(
@@ -38,11 +39,11 @@ let translateText = async (text) => {
   const options = {
     method: "POST",
     headers: {
-      "content-type": "application/x-www-form-urlencoded",
-      "Accept-Encoding": "application/gzip",
-      "X-RapidAPI-Key": "2b1cd29875mshd60650737281d1ap159bc0jsn9f9d8143a845",
-      "X-RapidAPI-Host": "google-translate1.p.rapidapi.com",
-    },
+		'content-type': 'application/x-www-form-urlencoded',
+		'Accept-Encoding': 'application/gzip',
+		'X-RapidAPI-Key': '8182bf80aemshd889891902e1604p1e2c7ejsn14c672760440',
+		'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
+	},
     body: encodedParams,
   };
 
@@ -57,14 +58,19 @@ let translateText = async (text) => {
   return await translatedText;
 };
 
-document
-  .querySelector(selectors.translate_text_btn)
-  .addEventListener("click", async () => {
+let main = async () => {
     let text = document.querySelector(selectors.textArea).value;
     console.log("Clicked");
     let test = await translateText(text);
     console.log(test);
     document.querySelector(selectors.resultArea).textContent = test;
+}
+
+
+document
+  .querySelector(selectors.translate_text_btn)
+  .addEventListener("click", () => {
+    main()
   });
 
 fetchLanguaes();
