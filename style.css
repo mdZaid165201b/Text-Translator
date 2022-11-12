@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+  box-sizing: border-box;
+}
+.container {
+  background-color: white;
+  height: 100vh;
+  /* color: white; */
+}
+.title {
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  color: brown;
+}
+hr {
+  width: 50%;
+  margin: 0 25% 0 25%;
+  border: 2px dashed brown;
+}
+
+.input-area{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    align-items: center;
+    text-align: center;
+}
+textarea{
+    padding: 15px;
+    font-size: 18px;
+    resize: vertical;
+    font-stretch: expanded;
+    letter-spacing: 1.5px;
+    color: brown;
+    opacity: 0.8;
+    outline: none;
+    /* border: 2px solid brown; */
+    border: 2px solid brown;
+    border-radius: 15px;
+    
+}
+textarea:focus{
+    border: 2px solid rgb(126, 8, 8);
+}
+.labelText{
+    font-size: 25px;
+    margin: 10px;
+    color: brown;
+    opacity:  0.95;
+}
+.translate-text{
+    margin: 20px;
+    padding: 15px;
+    background-color: brown;
+    opacity: 0.98;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+}
+.translate-text:hover{
+    background-color: rgb(155, 12, 12);
+    color: white
+}
+.result{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.final-Result{
+  font-size: 30px;
+  font-weight: 800;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
