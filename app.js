@@ -58,8 +58,8 @@ let translateText = async (text) => {
   return await translatedText;
 };
 
-let main = async () => {
-    let text = document.querySelector(selectors.textArea).value;
+let main = async (text) => {
+    
     console.log("Clicked");
     let test = await translateText(text);
     console.log(test);
@@ -70,7 +70,11 @@ let main = async () => {
 document
   .querySelector(selectors.translate_text_btn)
   .addEventListener("click", () => {
-    main()
+    let text = document.querySelector(selectors.textArea).value;
+    if(text != ""){
+        main(text)
+    }
+    else{ alert("Please type text!!!") }
   });
 
 fetchLanguaes();
